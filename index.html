@@ -59,10 +59,65 @@
             </div>
           </div>
         </section>
+        <section>
+          
+        </section>
+        <section class="objetivo">
+          <h2>Nosso Objetivo</h2>
+          <div class="contentObjetivo reveal">
+            <div class="boxObjetivo">
+              <img src="img/graphic-design.png" alt="">
+              <span>Cursos para<br>Desenvolvedores</span>
+              <ul>
+                <li><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></li>
+                <li><p>Lorem Ipsum is simply dummy text of the printing</p></li>
+                <li><p>Lorem Ipsum is simply dummy text of the printing and typesetting </p></li>
+              </ul>
+            </div>
+            <div class="boxObjetivo">
+              <img src="img/development.png" alt="">
+              <span id="formatTxt">Aprenda do zero</span>
+              <ul>
+                <li><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></li>
+                <li><p>Lorem Ipsum is simply dummy text of the printing</p></li>
+                <li><p>Lorem Ipsum is simply dummy text of the printing and typesetting </p></li>
+              </ul>
+            </div>
+            <div class="boxObjetivo">
+              <img src="img/maintenance.png" alt="">
+              <span>Aperfeiçoe o seu<br>conhecimento</span>
+              <ul>
+                <li><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></li>
+                <li><p>Lorem Ipsum is simply dummy text of the printing</p></li>
+                <li><p>Lorem Ipsum is simply dummy text of the printing and typesetting </p></li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </main>
       <footer>
       
       </footer>
     </section>
+    <script>
+      window.addEventListener('scroll', reveal);
+
+      function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+        
+        for(var i = 0; i < reveals.length; i++){
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+
+          if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+          }
+          else{
+            reveals[i].classList.remove('active');
+          }
+        }
+      }
+    </script>
   </body>
 </html>
